@@ -49,7 +49,7 @@ class TestGetReceipe:
     def test_take_best_true(self, mockedRandom, mockedGetRoR, sut, mockedReturn, expected):
         mockedDiet = mock.MagicMock()
         mockedDiet.name = ""
-        mockedRandom.return_value = 1
+        mockedRandom.return_value = 0
         mockedGetRoR.return_value = mockedReturn
 
         resultReadiness = sut.get_recipe(mockedDiet, True)
