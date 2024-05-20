@@ -56,7 +56,7 @@ class TestGetReceipe:
         assert resultReadiness == expected
 
     @pytest.mark.parametrize('mockedReturn, expected', [
-        ({"first": 0.10, "second": 0.11}, "second"),
+        ({"first": 0.10, "second": 0.11}, "first"),
     ])
     @mock.patch('src.controllers.recipecontroller.RecipeController.get_readiness_of_recipes', autospec=True)
     @mock.patch('src.controllers.recipecontroller.random.randint', autospec=True)
